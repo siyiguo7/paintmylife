@@ -8,8 +8,8 @@ import {
 } from "../../redux/slice/productSlice";
 // import styles from "./Product.module.scss";
 import  "../../components/product/Product.css";
-import spinnerImg from "../../assets/spinner.jpg";
-import { FaCogs } from "react-icons/fa";
+// import spinnerImg from "../../assets/spinner.jpg";
+// import { FaCogs } from "react-icons/fa";
 import HomeProdList from "./HomeProd";
 
 const HomeProduct = () => {
@@ -40,12 +40,20 @@ const HomeProduct = () => {
     <section>
        <div className="roomIllusion">
         <h2>
-          New Arrivals
+          1. Choose the theme and place the order
         </h2>
+        <h2>
+          2. Send photo(s)to the email address: paintmylife
+        </h2>
+        <h2>
+          3. Our team will contact you to start the commision
+        </h2>
+        <h2>
+          4. Ship & delivery
+        </h2>
+         
       </div>
-     <div className='productContent'>
-      <HomeProdList products={products}/>
-    </div>
+      
    </section>
   );
 };

@@ -7,9 +7,7 @@ const Editorial = () => {
     <section>        
       <EditorioProduct />
       <div className="roomIllusion">
-      <h2>
-        Room Illusions
-      </h2>
+        
       </div>  
       <Slider/>
    </section>

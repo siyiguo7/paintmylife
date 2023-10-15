@@ -9,20 +9,25 @@ import {
   DECREASE_CART,
   selectCartItems,
 } from "../../../redux/slice/cartSlice";
+import Card from "../../card/Card";
 import '../../../Styles/signup.css'
-import useFetchCollection from '../../../customHooks/useFetchCollection';
+ import useFetchCollection from '../../../customHooks/useFetchCollection';
 import useFetchDocument from '../../../customHooks/useFetchDocument';
 import UseFetchArtistProfDoc from '../../../customHooks/UseFetchArtistProfDoc';
+import StarsRating from 'react-star-rate';
+import { selectProducts } from '../../../redux/slice/productSlice';
  const Registration =()=>{ 
 const {id} = useParams()
 const [product, setProduct] = useState(null);
 const [artistInfo, setArtistInfo] = useState('');
 
 const dispatch = useDispatch();
+const productThemes = useSelector(selectProducts)
 const cartItems = useSelector(selectCartItems);
 const { document } = useFetchDocument("posts", id);
 const { artist } = UseFetchArtistProfDoc("posts", id);
  const { data } = useFetchCollection("reviews");
+ const [selectedProduct, setSelectedProduct] = useState()
 const filteredReviews = data.filter((review) => review.productID === id);
 
 const cart = cartItems.find((cart) => cart.id === id);
@@ -39,6 +44,7 @@ useEffect(() => {
 }, [artist]);
 
 const addToCart = (product) => {
+  
   dispatch(ADD_TO_CART(product));
   dispatch(CALCULATE_TOTAL_QUANTITY());
 };
@@ -50,24 +56,24 @@ const decreaseCart = (product) => {
 
   return (
     <main>
-<section>
+<section className='productDetailContainer'>
 <div className='upContainer'>
 <div className='upContent'>
 <div className='upImg'>
 <img src={product?.image} alt="imagedetail" />
 </div>
-<div className='upInfo'>
+<div className='upInfo1'>
 <div className='imageInfo'>
 <div className='imageInfoView'>    
-<h1>{product?.displayName}</h1>
+<h1>{product?.displayName} {product?.lastName}</h1>
 <div className='detNameInfo'>
-<h1>{product?.name},</h1>
-<h1>{product?.year}</h1>
+<h2><b>{product?.name},</b></h2>
+<h2><b>{product?.year}</b></h2> 
 </div>
 <h2>{product?.rarity}</h2>
 <h2>{product?.artSize}</h2> 
 
-<h3 className=''>{`$${product?.price}`}</h3>
+{/* <h3 className=''>{`$${product?.price}`}</h3> */}
 <h2 className=''>Shipping fee {`$${product?.shipfee}`}</h2>
 <div className='count'>
                   {isCartAdded < 0 ? null : (
@@ -91,11 +97,66 @@ const decreaseCart = (product) => {
  )}
                 </div>
 
-<a>
- <button className='btn'
-  onClick={() => addToCart(product)}
- >Add to Cart</button>
- </a>
+<div className='PricesContaner'>
+
+ <div className='leftPriceCont'>
+ <div className='PricesCont'>
+<p>8" x 12"</p>
+  <a href='https://buy.stripe.com/00g28Ke2y95PdeU000' target='blank'>
+  <button className='btn'> $139 Checkout</button>
+  </a>
+ </div>
+
+
+ <div className='PricesCont'>
+<p>12" x 16"</p>
+<a href='https://buy.stripe.com/cN200C7Eaeq9deU5kl' target='blank'>
+  <button className='btn'> $239 Checkout</button>
+  </a>
+ </div>
+
+ <div className='PricesCont'>
+<p>16" x 20"</p>
+<a href='https://buy.stripe.com/28o7t44rY5TDa2I5km' target='blank'>
+  <button className='btn'> $279 Checkout</button>
+  </a>
+ </div>
+ </div>
+
+<div className='rightPriceCont'>
+
+<div className='PricesCont'>
+<p>20" x 24"</p>
+<a href='https://buy.stripe.com/7sIbJkgaGdm5caQ8wz' target='blank'>
+  <button className='btn'> $339 Checkout</button>
+  </a>
+ </div>
+
+ <div className='PricesCont'>
+<p>24" x 30"</p>
+<a href='https://buy.stripe.com/4gwcNoaQm1Dn4Io148' target='blank'>
+  <button className='btn'> $379 Checkout</button>
+  </a>
+ </div>
+
+ <div className='PricesCont'>
+<p>24" x 36"</p>
+<a href='https://buy.stripe.com/14kaFg1fM95Pfn2eUZ' target='blank'>
+  <button className='btn'> $439 Checkout</button>
+  </a>
+ </div>
+</div>
+
+ <div className='PricesCont'>
+<p>36" x 48"</p>
+<a href='https://buy.stripe.com/cN25kW7Ea3Lvfn28wC' target='blank'>
+  <button className='btn'> $539 Checkout</button>
+  </a>
+ </div>
+ 
+</div>
+
+ 
  
 <div>
 <p>
@@ -107,7 +168,7 @@ const decreaseCart = (product) => {
 </div>
 </div>
 {/* <div className='hr'><hr></hr>  </div> */}
-<div className='aboutArtWork'>
+{/* <div className='aboutArtWork'>
           <h1>About the work</h1>
           <div className='abtArtWork'>
            <div className='abtArtWorkinpt' >
@@ -137,30 +198,50 @@ const decreaseCart = (product) => {
            <h3>{product?.country}</h3>
             </div>            
           </div>
-          </div>  
+          </div>   */}
         
 
-        <div className='ArtistImgViewConProf'>
+        {/* <div className='ArtistImgViewConProf'>
            <div className='ArtistImgViewContProf'>
-           {/* <div className='ArtistImgViewConDet'>
-           <div className='ArtistImgViewConDet'>
-           <img src='https://images.unsplash.com/photo-1686594094819-0685648e8925?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw0fHx8ZW58MHx8fHx8&auto=format&fit=crop&w=500&q=60' alt="profile" />
-            <div className='ArtistImgViewConDetNames'>
-              <h2>{product?.displayName}</h2>
-              <h4>{product?.country}</h4>
-            </div>
+            
            </div>
-           <div className='btn'>
-           <button>Follow</button>
-           </div>
-           </div>
-           <div className='ArtistIamgeViewStory'>
-           <h2>
-            {artistInfo?.displayName}
-           </h2>
-           </div> */}
-           </div>
-        </div>
+
+           <Card cardClass='reviewcard'>
+          <h1>Product Reviews</h1>
+          <div>
+            {filteredReviews.length === 0 ? (
+              <p>There are no reviews for this product yet.</p>
+            ) : (
+              <>
+                {filteredReviews.map((item, index) => {
+                  const { rate, review, reviewDate, userName, image } = item;
+                  return (
+                    <div key={index} className='reviewcontainer'>
+                       <div className='reviewcont'>
+                       <h1>
+                        <b>{userName}</b>
+                      </h1>
+                      
+                      <h2>
+                        <b>{reviewDate}</b>
+                      </h2>
+                      <StarsRating value={rate} className="rating" />                      
+                      <p>{review}</p>
+                      <img src={image}
+                      style={{width: '50%', 
+                      marginTop: '20px',marginBottom: '20px', backgroundClip: '#f5f5f5', height: '50%'}}  alt='productreviewimage'/>
+                       </div>
+                      
+                      <hr style={{width: '100%', marginTop: '20px',marginBottom: '20px', backgroundClip: '#f5f5f5'}}></hr>
+                      
+                    </div>
+                  );
+                })}
+              </>
+            )}
+          </div>
+        </Card>
+        </div> */}
      
 </div>
 </section>

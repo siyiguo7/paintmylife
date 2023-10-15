@@ -1,0 +1,52 @@
+/* Styles for the container */
+.editorial-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; /* Adjust as needed */
+  }
+  
+  /* Styles for each pool box */
+  .pool-box {
+     margin-bottom: 20px;
+    /* border: 1px solid #ccc; */
+    padding: 10px;
+    /* box-sizing: border-box; */
+  }
+  
+  /* Styles for the pool images */
+  .pool-box img {
+    width: 400px;
+    height: 400px;
+  }
+  
+  /* Styles for the pool information */
+  .pool-info {
+    margin-top: 10px;
+  }
+  
+  /* Styles for the price details */
+  .price-details h2 {
+    font-size: 16px;
+    margin: 5px 0;
+  }
+  
+  /* Styles for the checkout button */
+  .checkout-button {
+    background-color: #007bff;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    cursor: pointer;
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    .editorial-container {
+      flex-direction: column;
+    }
+  
+    .pool-box {
+      width: 100%; /* Pool boxes take full width on smaller screens */
+    }
+  }
+  

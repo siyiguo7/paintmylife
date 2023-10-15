@@ -1,8 +1,7 @@
  /* Filter Generetor */
  
  .ArtCollection1 {   
-    width: 85%;
-     margin: auto;
+      margin: auto;
       display: flex;
      /* background-color: aquamarine; */
       }
@@ -286,4 +285,8 @@
    align-items: center;
    margin-left: 20px;
    justify-content: space-between;
+  }
+
+  .artcollectInfo{
+   width: 400px;
   }

@@ -50,7 +50,7 @@ const EditorialList = ({ products }) => {
             {currentProducts.map((product) => {
               return (
             <div key={product.id}>
-            <EditorialItem {...product} grid={grid} product={product} />
+            <EditorialItem  />
             </div>
               );
             })}
@@ -58,12 +58,7 @@ const EditorialList = ({ products }) => {
         )}
          
       </div>
-      <Pagination
-          currentPage={currentPage}
-          setCurrentPage={setCurrentPage}
-          productsPerPage={productsPerPage}
-          totalProducts={filteredProducts.length}
-        />
+       
     </div>
   );
 };

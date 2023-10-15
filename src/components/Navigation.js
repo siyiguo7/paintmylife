@@ -1,26 +1,21 @@
 import { useState } from "react";
-import { Link, NavLink, useNavigate } from "react-router-dom";
- import { FaShoppingCart, FaTimes, FaUserCircle } from "react-icons/fa";
- import { onAuthStateChanged, signOut } from "firebase/auth";
+import { Link, useNavigate } from "react-router-dom";
+  import { signOut } from "firebase/auth";
 import { toast } from "react-toastify";
 import { useEffect } from "react";
-import { IoBasketSharp, IoLogOut } from 'react-icons/io5';
+import { IoBasketSharp, } from 'react-icons/io5';
 import '../Styles/Navigation.css' 
 import { useDispatch, useSelector } from "react-redux";
-// import ShowOnLogin, { ShowOnLogout } from "../hiddenLink/hiddenLink";
- import { CALCULATE_TOTAL_QUANTITY, selectCartTotalQuantity } from "../redux/slice/cartSlice";
-import { REMOVE_ACTIVE_USER, SET_ACTIVE_USER } from "../redux/slice/authSlice";
-import { auth } from "../firebase/config";
-import { AdminOnlyLink } from "./adminOnlyRoute/AdminOnlyRoute";
- 
+  import { CALCULATE_TOTAL_QUANTITY, selectCartTotalQuantity } from "../redux/slice/cartSlice";
+ import { auth } from "../firebase/config";
+  
   
 
  
 
 const Header = () => {
   const [showMenu, setShowMenu] = useState(false);
-  const [displayName, setdisplayName] = useState("");
-  const [scrollPage, setScrollPage] = useState(false);
+   const [scrollPage, setScrollPage] = useState(false);
   const cartTotalQuantity = useSelector(selectCartTotalQuantity);
 
   useEffect(() => {
@@ -73,7 +68,7 @@ const Header = () => {
 {/* Logo */}
 <div className='logoHolder'>
 <a href='/'>
-<img src={require('../images/Logo.png')} width={200}  height={50} alt='Art-Hub Logo' />
+<img src={require('../assets/logos/pml2.png')} width={'100%'}  height={50} alt='Art-Hub Logo' />
 </a>
 </div>
 {/* sereach bar */}
@@ -88,37 +83,32 @@ const Header = () => {
 <label for='checkbox_toggle' className='hamburger'>&#9776;</label>
 {/* navigation menu */}
 <div className='menu'>
-<li><a href='/' className='navName' id="active1">Home</a></li>
-<li className='services'>
+ {/* <li className='services'>
 <a href='/artist' className='navName'>Artist</a>
- 
 </li>
-
 <li className='services' id='navDrop'>
-<a href='/gallery' className='navName'>Artworks</a>        
-</li>
-<li className='services'>
-<a href='/gallery' className='navName'>Services</a>
-<ul className='dropdown'>
-<li><a href="/subscription">Art Subscription</a></li>
- </ul> 
-</li>   
+<a href='/gallery' className='navName'>Artworks</a>
+</li> */}
+  
  {/* <AdimRoute>
  <li><a href="/adminpage" className='navName'>Admin</a></li>  
  </AdimRoute> */}
  
-<div onClick={toggleMenu} className="" > {cart}</div>
-
-<li className="logbutton"><a href="/login">Login</a></li>
-   </div>  
-</ul>
+ 
+ 
+{/* <li><a href="/profile" className='navName'>Profile</a></li>   */}
 
  
+ <li className='services' id='profileNav'>           
+ 
+ 
+</li>                     
+  </div>  
+</ul> 
 </div>
 </nav>
 </headers>
-
-</div>
+</div> 
   
   </>
      

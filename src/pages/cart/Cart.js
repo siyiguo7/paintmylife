@@ -54,12 +54,9 @@ const Cart = () => {
   const url = window.location.href;
 
   const checkout = () => {
-    if (isLoggedIn) {
+   
       navigate("/checkout-details");
-    } else {
-      dispatch(SAVE_URL(url));
-      navigate("/login");
-    }
+  
   };
 
   return (

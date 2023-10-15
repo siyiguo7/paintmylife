@@ -1,0 +1,21 @@
+.faq{
+    margin: auto;
+    width: 100%;
+     margin-top: 100px;
+
+}
+
+.faq h2{
+    margin: 20px;
+    font-size: 40px;
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+
+}
+
+.faq p{
+    margin: 20px;
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+
+}

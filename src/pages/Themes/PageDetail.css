@@ -1,0 +1,49 @@
+.detailContainer {
+    margin-top: 10px;
+    width: 70%;
+    margin: auto;
+}
+
+ 
+.detailInfo {
+    padding: 25px;
+    display: flex;
+    justify-content: space-between;
+ }
+
+.upImg1 img{
+    max-width: 400px;
+    height: auto;
+    margin-top: 30px;
+}
+
+.PricesContaner1 {
+     width: auto;
+ 
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+.leftPriceCont1 {
+    
+    justify-content : center;
+}
+.PricesCont1{
+    margin: 20px;
+ }
+
+.PricesCont1 button{
+    background-color:#869EAC;
+    border: none;
+    padding: 20px;
+    margin: 10px;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.PricesCont1 button:hover{
+    cursor: pointer;
+    background-color: #CFECEF ;
+}

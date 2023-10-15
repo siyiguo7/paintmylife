@@ -1,22 +1,23 @@
 import React  from "react";
-  import Slider from "../../components/slider/Slider"; 
-import HomeProduct from "./HomeProduct";
+import Slider from "../../components/slider/Slider"; 
 import Editorial from "../Editorial/Editorial";
 import '../home/Home.css'
+import FAQ from '../FAQ'
+import EditorialItem from "../Editorial/EditorialItem";
 const Home = () => {  
   return (
-    <div>
-      {/* <SlideShow/> */}
-      <Slider />
-      <section>         
-      <HomeProduct/>     
-      <div className="roomIllusion">
-      <h2>
-        Collection
-      </h2>
-      </div>  
-      <Editorial/>
+    <div className="homeContainer">
+       {/* <Slider /> */}
+      <section className="homeContents">         
+      <div className="steps">
+       <img src={require('../../assets/StepsMainLong.png')} alt="steps"/>
+       </div> 
+       
+      <EditorialItem/>
+      
+       <FAQ/>
      </section>
+      
      </div>
   );
 };
