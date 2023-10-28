@@ -31,7 +31,7 @@ const EditorialItem = ( ) => {
      </div>   
     <div className='pool-info'>
     <div>           
-     <h1> Remember a beloved pet
+     <h1> Oil on Canvas
 </h1>
    {/* <div>
    <div className="price-details">
@@ -110,7 +110,7 @@ const EditorialItem = ( ) => {
      </div>   
     <div className='pool-info'>
     <div>           
-     <h1> Special Someone
+     <h1> Special Someone, Colored Pencil
 </h1>
    {/* <div>
    <div className="roomIllusion1">
@@ -186,7 +186,7 @@ const EditorialItem = ( ) => {
     <div className='pool-info'>
     <div>           
      
-    <h1> Bring a family together
+    <h1> Bring a family together, Charcoal
 </h1>
    {/* <div>
    <div className="roomIllusion1">
@@ -224,7 +224,7 @@ const EditorialItem = ( ) => {
     <div className='pool-info'>
     <div>           
      
-    <h1> Remember a loved one
+    <h1> Remember a loved one, Water Color
 </h1>
    {/* <div>
    <div className="roomIllusion1">
@@ -255,7 +255,7 @@ const EditorialItem = ( ) => {
       <div className='pool-box'>         
        <div >    
    <Link to={`/generation`}>
-   <img src={require('../../assets/generation.JPG.png')} alt=""/>  
+   <img src={require('../../assets/connectgeneration1.jpeg')} alt=""/>  
    </Link>  
      </div>   
     <div className='pool-info'>
@@ -298,7 +298,7 @@ const EditorialItem = ( ) => {
     <div className='pool-info'>
     <div>           
     <div>
-    <h1> Other
+    <h1> Other, Fine Brushwork Painting
 </h1>
 <h3>Baby Portrait, Scenery, Landscape...</h3>
     </div>
