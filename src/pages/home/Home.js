@@ -21,7 +21,7 @@ const Home = () => {
         <h3>2. Broad Themes and Media. From nostalgic portraits to recreating cherished moments, from oil on canvas painting to color pencil, we are here to celebrate life, in unique ways, together with you.</h3>
         <h3>3. Deeply committed. We strive to provide the best service possible. Your satisfaction is our top priority.</h3>
         <br></br>
-        <h1> Why choose a Custom Painting?
+        <h1> Why choose a Custom Painting?</h1>
           <h3>Unique and Original, Emotional Connection, Storytelling, Artistic Expression and Collaboration, Interior Decor, Thoughtful gifts, Heirloom Quality and Timelessness</h3>
       </div>
       <div>
