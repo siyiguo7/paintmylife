@@ -23,7 +23,10 @@ const EditorialItem = ( ) => {
     <div className='pool-box'>         
        <div >    
    <Link to={`/pet`}>
-   <img src={require('../../assets/Animal.jpg')} alt=""/>  
+   <img style={{
+    width: '600px',
+    height:'700px',
+   }} src={require('../../assets/kid.jpg')} alt=""/>  
    </Link>  
      </div>   
     <div className='pool-info'>
@@ -47,7 +50,7 @@ const EditorialItem = ( ) => {
      </div> */}
        <Link to={'/pet'}>
       <div className="price">
-      <h2> Checkout</h2> 
+      <h2> Choose</h2> 
       </div>
       </Link>
     </div> 
@@ -87,7 +90,7 @@ const EditorialItem = ( ) => {
      </div> */}
        <Link to={'/wedding'}>
       <div className="price">
-      <h2> Checkout</h2> 
+      <h2> Choose</h2> 
       </div>
       </Link>
     </div> 
@@ -126,7 +129,7 @@ const EditorialItem = ( ) => {
      </div> */}
        <Link to={'/single'}>
       <div className="price">
-      <h2> Checkout</h2> 
+      <h2> Choose</h2> 
       </div>
       </Link>
     </div> 
@@ -164,7 +167,7 @@ const EditorialItem = ( ) => {
      </div>
        <Link to={'/couple'}>
       <div className="price">
-      <h2> Checkout</h2> 
+      <h2> Choose</h2> 
       </div>
       </Link>
     </div> 
@@ -202,7 +205,7 @@ const EditorialItem = ( ) => {
      </div> */}
        <Link to={'/family'}>
       <div className="price">
-      <h2> Checkout</h2> 
+      <h2> Choose</h2> 
       </div>
       </Link>
     </div> 
@@ -240,7 +243,7 @@ const EditorialItem = ( ) => {
      </div> */}
        <Link to={'/lovedone'}>
       <div className="price">
-      <h2> Checkout</h2> 
+      <h2> Choose</h2> 
       </div>
       </Link>
     </div> 
@@ -277,7 +280,7 @@ const EditorialItem = ( ) => {
      </div> */}
        <Link to={'/generation'}>
       <div className="price">
-      <h2> Checkout</h2> 
+      <h2> Choose</h2> 
       </div>
       </Link>
     </div> 
@@ -316,7 +319,7 @@ const EditorialItem = ( ) => {
      </div> */}
        <Link to={'/grand'}>
       <div className="price">
-      <h2> Checkout</h2> 
+      <h2> Choose</h2> 
       </div>
       </Link>
     </div> 

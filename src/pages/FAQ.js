@@ -48,6 +48,8 @@ const FQA = () => {
    ];
   return (
     <div className="faq">
+            <p>Click to view</p>
+
     <h2>Customer Q & A - Artwork Purchase Transactions</h2>
     {questions.map((q, index) => (
       <div key={index}>

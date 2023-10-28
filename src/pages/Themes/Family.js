@@ -104,7 +104,7 @@ const Family =()=>{
 
 
  <div className="PricesContainer">
-  <p>Sizes</p>
+ <p>Sizes and Prices</p>
       <select value={selectedSize} onChange={handleSizeChange} className='input'>
         {sizeOptions.map((option) => (
           <option key={option.value} value={option.value}>

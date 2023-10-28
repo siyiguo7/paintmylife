@@ -5,13 +5,13 @@ const Pets =()=>{
   const [selectedSize, setSelectedSize] = useState('');
   const sizeOptions = [
     { label: 'Select a size', value: '' },
-    { label: '8" x 12 ($139)"', value: '8x12' },
-    { label: '12" x 16 ($239)"', value: '12x16' },
-    { label: '16" x 20 ($279)"', value: '16x20' },
-    { label: '20" x 24 ($339)"', value: '20x24' },
-    { label: '24" x 30 ($379)"', value: '24x30' },
-    { label: '24" x 36 ($439)"', value: '24x36' },
-    { label: '36" x 48 ($539)"', value: '36x48' },
+    { label: '8" x 12" ($139)', value: '8x12' },
+    { label: '12" x 16" ($239)', value: '12x16' },
+    { label: '16" x 20" ($279)', value: '16x20' },
+    { label: '20" x 24" ($339)', value: '20x24' },
+    { label: '24" x 30" ($379)', value: '24x30' },
+    { label: '24" x 36" ($439)', value: '24x36' },
+    { label: '36" x 48" ($539)', value: '36x48' },
   ];
 
   const handleSizeChange = (event) => {
@@ -104,7 +104,7 @@ const Pets =()=>{
 
 
  <div className="PricesContainer">
-  <p>Sizes</p>
+  <p>Sizes and Prices</p>
       <select value={selectedSize} onChange={handleSizeChange} className='input'>
         {sizeOptions.map((option) => (
           <option key={option.value} value={option.value}>
@@ -115,6 +115,7 @@ const Pets =()=>{
       <button className="btn" onClick={handleButtonClick}>
         Purchase
       </button>
+       
     </div>
 <div>
 </div>

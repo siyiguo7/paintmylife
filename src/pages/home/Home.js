@@ -15,7 +15,7 @@ const Home = () => {
        
       <EditorialItem/>
       
-       <FAQ/>
+        <FAQ/>
      </section>
       
      </div>
